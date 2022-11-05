@@ -1,35 +1,24 @@
-//  WAP to convert given string into toggle case.
+// -- WAP to find all leap years from 2020 to 3030 and store them into an array.--
+
+
 
 #include<iostream>
-#include<string.h>
 using namespace std;
 
 int main()
 {
-	char name[50];
-	int n;
 	
-	cout << "Enter The Name :";
-	cin  >> name;
+	int a[1000], count = 0;
 	
-	n = strlen(name);
-	
-	cout << endl << " -- Convert String Toggle Case -- " << endl << 
-        endl;
-	for(int i=0; i<n; i++)
+	for(int i=2000; i<=3000; i++)
 	{
-		if(name[i]>=65 && name[i]<=90)
-		{
-			name[i]+=32;
-		}
-	      else
-		{
-			name[i]-=32;
-		}
+		if(i%4 == 0)
+			a[count++] = i;
 	}
 	
-	
-	cout << endl << "\t Name :" << name << endl;
-	
+	cout << endl << "------ Leap Year ------" << endl;
+	for(int i=0; i<count; i++)
+	{
+		cout << a[i] << endl;
+	}
 }
-

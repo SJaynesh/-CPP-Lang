@@ -1,37 +1,32 @@
-//  WAP to check given string is numeric or not.
+// WAP to find all even elements from given 1D array.
 
 #include<iostream>
-#include<string.h>
 using namespace std;
 
 int main()
 {
-	char name[50];
-	int n, digit = 0;
+	int n;
 	
-	cout << "Enter The Your Name :";
-	cin  >> name;
+	cout << "--------------------------------------" << endl;
+	cout << "Enter The Size Of Array :";
+	cin  >> n;
+	cout << endl << endl;
+	int arr[n];
 	
-	n = strlen(name);
-	
-	cout << endl << "----- String Is Numeric Or Not -----" << endl << endl;
+	cout << "----- DECLARE ARRAY -----" << endl;
 	for(int i=0; i<n; i++)
 	{
-	    if(name[i]>='0' && name[i]<='9')
-	    {
-	    	digit++;
-		}
-		
+		cout << "| Enter The Array a[%d] : |";
+		cin  >> arr[i];
 	}
 	
-		if(digit>0)
-		{
-			cout << name << " :- Numeric String Is Not Proper" << endl;
-		}
-		else
-		{
-			cout << name << " :- String Is Proper" << endl;
-		}
 	
+	cout << endl << " \t --: Even Element :--" << endl << endl;
+	for(int i=0; i<n; i++)
+	{
+		if(arr[i]%2==0)
+		{
+			cout << "| Array : " << arr[i] << "|" << endl;
+		}
+	}
 }
-
