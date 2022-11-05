@@ -1,34 +1,22 @@
-//  WAP to convert given string into toggle case.
-
+// WAP to find leap years from 2000 to 3000.
 
 #include<iostream>
-#include<string.h>
 using namespace std;
 
 int main()
 {
-	char name[50];
-	int n;
-	
-	cout << "Enter The Name :";
-	cin  >> name;
-	
-	n = strlen(name);
-	
-	cout << endl << " -- Convert String Toggle Case -- " << endl << endl;
-	for(int i=0; i<n; i++)
+	cout << endl << "\t\t----- Leap Years From 2000 To 3000. -----" << 
+   endl << endl;
+	for(int i=2000; i<=3000; i++)
 	{
-		if(name[i]>=65 && name[i]<=90)
+	    if(i%4 == 0)
 		{
-			name[i]+=32;
+			cout << "\t\t |---------------------|" << endl;
+			cout << " \t \t |--Leap Year :  " << i << "--|" << endl;
 		}
-	    else
-		{
-			name[i]-=32;
-		}
+		
 	}
 	
-	cout << "| -------------------------- |";
-	cout << endl << "\t Name :" << name << endl;
-	cout << "| -------------------------- |" << endl ;
+	
 }
+
